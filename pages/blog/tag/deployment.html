@@ -1,0 +1,18 @@
+---
+group: blog
+layout: blog
+class: blog
+permalink: /blog/tag/deployment/
+tag: Deployment
+title: Deployment
+description: All blog posts published under Deployment tag
+paginate:
+  collection: posts
+  per_page: 5
+  limit: false
+  permalink: '/page/:num/'
+  reversed: false
+  tag: 'Deployment'
+---
+
+{% include tag.html %}

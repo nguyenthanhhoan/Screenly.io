@@ -1,0 +1,33 @@
+<!doctype html>
+<!--[if lt ie 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if ie 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if ie 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt ie 8]><![endif]-->
+<html class="no-js">
+  {% include head.html %}
+
+  <body class="{{ page.class }}">
+      {% include mixpanel.html %}
+
+      <div role="main">
+          <div class="container">
+              {% include navbar.html %}
+          </div>
+      </div>
+
+      <section>
+          <div class="container">
+              <div class="row">
+                  <div class="span9 content">
+                      {{ content }}
+                  </div>
+                  <div class="span3 sidebar">
+                      {% include sidebar.html %}
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      {% include footer.html %} {% include foot.html %}
+  </body>
+</html>

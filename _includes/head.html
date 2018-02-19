@@ -1,0 +1,54 @@
+<head>
+  <meta charset="utf-8">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>{% include utils/page-title %}</title>
+  <meta name="description" content="{% include utils/page-description %}">
+
+  <link rel="apple-touch-icon" sizes="180x180" href={% asset_path "favicon/apple-touch-icon.png" %}>
+  <link rel="icon" type="image/png" sizes="32x32" href={% asset_path "favicon/favicon-32x32.png" %}>
+  <link rel="icon" type="image/png" sizes="194x194" href={% asset_path "favicon/favicon-194x194.png" %}>
+  <link rel="icon" type="image/png" sizes="192x192" href={% asset_path "favicon/android-chrome-192x192.png" %}>
+  <link rel="icon" type="image/png" sizes="16x16" href={% asset_path "favicon/favicon-16x16.png" %}>
+  <link rel="manifest" href={% asset_path "favicon/manifest.json" %}>
+  <link rel="mask-icon" href={% asset_path "favicon/safari-pinned-tab.svg" %} color="#355489">
+  <meta name="msapplication-TileColor" content="#355489">
+  <meta name="msapplication-TileImage" content={% asset_path "favicon/mstile-144x144.png" %}>
+  <meta name="theme-color" content="#ffffff">
+
+  <meta name="author" content="{% include utils/page-author %}">
+
+  <meta property="og:site_name" content="{{site.title}}">
+  <meta property="og:title" content="{% include utils/page-title %}">
+  <meta property="og:image" content="{% include utils/page-image %}">
+  <meta property="og:url" content="{{ page.url | prepend: site.production_url }}">
+  <meta property="og:type" content="{% if page.author %}article{% else %}website{% endif %}">
+  <meta property="og:description" content="{% include utils/page-description %}">
+  <meta property="og:article:author" content="{% include utils/page-author %}">
+
+  <meta name="twitter:card" content="{% if page.image %}summary_large_image{% else %}summary{% endif %}">
+  <meta name="twitter:title" content="{% include utils/page-title %}">
+  <meta name="twitter:site" content="@ScreenlyApp">
+  <meta name="twitter:description" content="{% include utils/page-description %}">
+  <meta name="twitter:image" content="{% include utils/page-image %}">
+  {% if page.author %}{% for author in site.data.authors %}{% if author.name == page.author %}{% if author.twitter %}<meta name="twitter:creator" content="@{{ author.twitter }}">{% endif %}{% endif %}{% endfor %}{% endif %}
+
+  {% javascript libs/modernizr-2.6.1.min %}
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" rel="stylesheet">
+  {% stylesheet css/core %}
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  {% stylesheet css/site %}
+
+  <!-- Optimizely -->
+  <script type="text/javascript" src="//cdn.optimizely.com/js/2773910466.js"></script>
+  <!-- Google Tag Manager -->
+  <script type="text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-W77ZZG6');</script>
+  <script type="text/javascript">
+    (function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+    for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+  </script>
+  <!--[if lt IE 9]-->
+  <script type="text/javascript" src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <!--[endif]-->
+</head>

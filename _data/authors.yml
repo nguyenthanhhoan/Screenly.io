@@ -1,0 +1,15 @@
+- name: vpetersson
+  full_name: Viktor Petersson
+  twitter: https://twitter.com/vpetersson
+  github: https://github.com/vpetersson
+  avatar:  /assets/img/viktorpetersson.jpg
+  description:   |
+      CEO and Co-founder of @WireLoad / @ScreenlyApp. #DigitalNomad #Entrepreneur #Speaker #Geek #Cloud #DevOps
+
+- name: aljungberg
+  full_name: Alexander Ljungberg
+  twitter: https://twitter.com/slevenbits
+  github: https://github.com/aljungberg
+  avatar:  /assets/img/alexander-ljungberg.jpg
+  description:   |
+      CTO and co-founder of WireLoad and Screenly. Product development, software design and graphical design. Speciality in coding through unchartered grounds.

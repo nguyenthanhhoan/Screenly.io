@@ -1,0 +1,35 @@
+{% for author in site.data.authors %}
+  {% if author.name == page.author %}
+<h1>{{author.full_name}}</h1>
+<p>{{author.description}}</p>
+  {% endif %}
+{% endfor %}
+
+<div class="posts">
+{% for post in paginator.posts %}
+{% if post.author == page.author %}
+  <article>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <div class="datebox">
+        {{ post.date | date_to_long_string }}
+      </div>
+      <div class="text">{{ post.content | strip_html | truncatewords:75 }}</div>
+      <div class="continue">
+          <a href="{{ post.url }}" class="btn btn-small btn-info">Continue reading</a>
+      </div>
+  </article>
+{% endif %}
+{% endfor %}
+</div>
+
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  <p>Page {{paginator.page}} of {{paginator.total_pages}}</p>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="btn btn-primary next">Older</a>
+  {% endif %}
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="btn btn-primary prev">Newer</a>
+  {% endif %}
+</div>
+{% endif %}

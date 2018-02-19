@@ -1,0 +1,11 @@
+{%- if {{page.group}} contains 'blog' -%}
+  {%- if {page.description} != -%}
+    {{ page.description }}
+  {%- else -%}
+    {{ page.excerpt | strip_html | truncate: 157 }}
+  {%- endif -%}
+{%- elsif {page.description} != -%}
+    {{ page.description }}
+{%- else -%}
+    {{ site.title }} – {{ site.description }}
+{%- endif -%}

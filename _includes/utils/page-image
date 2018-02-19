@@ -1,0 +1,5 @@
+{%- if {{page.image}} != -%}
+  {% asset_path {{page.image}} -%}
+{%- else -%}
+  {% asset_path {{site.image}} -%}
+{%- endif -%}

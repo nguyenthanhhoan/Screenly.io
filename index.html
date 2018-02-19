@@ -1,0 +1,111 @@
+---
+layout: main
+class: home
+theme: dark
+track_links:
+  - "#top-learn-more, Clicked Learn More, marketing_site, index_top"
+  - "#top-pricing, Clicked Pricing, marketing_site, link_index_top"
+  - "#top-news, Clicked Blog, marketing_site, index_top"
+  - "#bottom-learn-more, Clicked Learn More, marketing_site, index_bottom"
+  - "#bottom-sign-up, Clicked Sign Up, marketing_site, index_bottom"
+  - "#bottom-pricing, Clicked Pricing, marketing_site, index_bottom"
+---
+<section class="introduction" role="main">
+  <div class="hero-unit dark">
+    {% include navbar.html %}
+    <div class="container">
+      <div class="row">
+        <div class="span5 tvcounter">
+          <header>
+            <hgroup>
+              <h1>Digital signage made&nbsp;easy.</h1>
+              <h2>
+                Full HD video and images on your TV screens
+                <strong>powered by a single Raspberry Pi</strong>
+                mini computer and the revolutionary
+                <strong>Screenly digital signage software stack.</strong>
+              </h2>
+            </hgroup>
+            <a class="btn btn-large btn-primary" href="{{site.url}}/tour/" id="top-learn-more">Learn More</a>
+            <a class="btn btn-large btn-info" href="{{site.url}}/pricing/" id="top-pricing">Pricing</a>
+            <a class="btn btn-large btn-info" href="{{site.url}}/blog" id="top-news">Blog</a>
+          </header>
+        </div>
+        <div class="span7 tvcontainer">
+          <div class="tvslider">
+            <div class="left-wall"></div>
+            <div class="right-wall"></div>
+            <div class="screens">
+              {% for col in (0..2) %}
+              <div class="column">
+                {% img "98822.jpg" %} {% img "1053211.jpg" %} {% img "1278036.jpg" %}
+              </div>
+              <div class="column">
+                {% img "54084.jpg" %} {% img "70689.jpg" %} {% img "1243927.jpg" %}
+              </div>
+              <div class="column">
+                {% img "347699.jpg" %} {% img "659146.jpg" %} {% img "98822.jpg" %}
+              </div>
+              <div class="column">
+                {% img "2062339829.jpg" %} {% img "5794905716.jpg" %} {% img "6874560581.jpg" %}
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container features">
+    <div class="row">
+      <div class="span4">
+        <div class="feature">
+          <h3><i class="icon-hdd icon-large"></i>Tiny Hardware, Huge Impact</h3>
+          <p>
+          It doesn't take much to set up a new Screenly display. Take a TV, add a cost effective, tiny <a href="{{site.url}}/digital-signage-players">Raspberry Pi</a> and display full HD quality moving imagery, web content and static images in moments.
+          </p>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="feature">
+          <h3><i class="icon-map-marker icon-large"></i>Manage a Media Empire from Home</h3>
+          <p>Whether you have a single screen in your store, or a thousand screens nationwide, manage them all within a single powerful web interface.</p>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="feature">
+          <h3><i class="icon-cloud icon-large"></i>Set and Forget</h3>
+          <p>Store your assets in the Screenly cloud for reliable long term storage. We take care of video encoding and local caching.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span4">
+        <div class="feature">
+          <h3><i class="icon-bolt icon-large"></i>Automatic Updates</h3>
+          <p>Ensure optimal uptime for your displays through automatic security updates and Screenly's central software management.</p>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="feature">
+          <h3><i class="icon-dashboard icon-large"></i>Monitor the Health of your Displays</h3>
+          <p>Check up on the status of your display nodes in Screenly's web interface, including node uptime and connectivity status and what's currently showing.</p>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="feature">
+          <h3><i class="icon-time icon-large"></i>Fast Setup</h3>
+          <p>Roll out a new display in just 4 steps. We've solved all the tricky technical problems for you so that you can focus on getting the best content in front of your audience today.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container call-to-action">
+    <br/>
+    <div class="text-center">
+      <a class="btn btn-large btn-primary" href="{{site.url}}/tour/" id="bottom-learn-more">Learn More</a>
+      <a class="btn btn-large btn-info" href="https://login.screenlyapp.com/signup" id="bottom-sign-up" style="margin-left: 10px">Sign Up</a>
+      <a class="btn btn-large btn-info" href="{{site.url}}/pricing/" id="bottom-pricing" style="margin-left: 10px">Pricing</a>
+    </div>
+  </div>
+</section>

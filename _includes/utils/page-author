@@ -1,0 +1,11 @@
+{%- if page.author -%}
+  {%- for author in site.data.authors -%}
+    {%- if author.name == page.author -%}
+      {%- if author.full_name -%}
+        {{ author.full_name }}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- else -%}
+    {{ site.author.name }}
+{%- endif -%}

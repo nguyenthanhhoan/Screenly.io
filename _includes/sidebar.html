@@ -1,0 +1,17 @@
+<div class="widget recent-posts">
+    <h3 class="widget-title">Recent Posts</h3>
+
+    {% for post in site.posts limit:5 %}
+      {% if page.title != post.title %}
+    <a href="{{post.url}}">{{ post.title }}</a>
+      {% endif %}
+    {% endfor %}
+</div>
+
+<div class="widget categories">
+    <h3 class="widget-title">Blog Categories</h3>
+
+    {% for cat in site.categories %}
+    <div class="cat{% if page.category == cat[0]%} active{% endif %}"><a href="{{site.url}}/blog/category/{{cat[0] | slugify}}/">{{cat[0]}} <sup>({{cat[1].size}})</sup></a></div>
+    {% endfor %}
+</div>

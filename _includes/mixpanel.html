@@ -1,0 +1,17 @@
+<script type="text/javascript">
+!(function() {
+  "use strict";
+  if ('mixpanel' in window) {
+    mixpanel.track_links("#nav-home", "Clicked Home", { "web_property": "marketing_site", "link_location": "navbar" });
+    mixpanel.track_links("#nav-tour", "Clicked Tour", { "web_property": "marketing_site", "link_location": "navbar" });
+    mixpanel.track_links("#nav-pricing", "Clicked Pricing", { "web_property": "marketing_site", "link_location": "navbar" });
+    mixpanel.track_links("#nav-faq", "Clicked FAQ", { "web_property": "marketing_site", "link_location": "navbar" });
+    mixpanel.track_links("#nav-api", "Clicked API", { "web_property": "marketing_site", "link_location": "navbar" });
+    mixpanel.track_links("#nav-ose", "Clicked OSE", { "web_property": "marketing_site", "link_location": "navbar" });
+    mixpanel.track_links("#nav-distributors", "Clicked Distributors", { "web_property": "marketing_site", "link_location": "navbar" });
+    mixpanel.track_links("#nav-sign-in", "Clicked Sign In", { "web_property": "marketing_site", "link_location": "navbar" });
+    {% for link in page.track_links %}{% assign l = link | split: ", " %}
+    mixpanel.track_links("{{l[0]}}", "{{l[1]}}", { "web_property": "{{l[2]}}", "link_location": "{{l[3]}}", "mirror": "{{l[4]}}" });{% endfor %}
+  }
+}());
+</script>

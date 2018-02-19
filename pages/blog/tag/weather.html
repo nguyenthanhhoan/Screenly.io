@@ -1,0 +1,18 @@
+---
+group: blog
+layout: blog
+class: blog
+permalink: /blog/tag/weather/
+tag: Weather
+title: Weather
+description: All blog posts published under Weather tag
+paginate:
+  collection: posts
+  per_page: 5
+  limit: false
+  permalink: '/page/:num/'
+  reversed: false
+  tag: 'Weather'
+---
+
+{% include tag.html %}

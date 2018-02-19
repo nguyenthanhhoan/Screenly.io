@@ -1,0 +1,5 @@
+{%- if {page.title} != -%}
+    {{site.title}} - {{page.title}}
+{%- else -%}
+    {{site.title}} – {{site.tagline}}
+{%- endif -%}

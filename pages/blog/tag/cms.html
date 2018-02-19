@@ -1,0 +1,18 @@
+---
+group: blog
+layout: blog
+class: blog
+permalink: /blog/tag/cms/
+tag: CMS
+title: CMS
+description: All blog posts published under CMS tag
+paginate:
+  collection: posts
+  per_page: 5
+  limit: false
+  permalink: '/page/:num/'
+  reversed: false
+  tag: 'CMS'
+---
+
+{% include tag.html %}

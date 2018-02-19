@@ -1,0 +1,18 @@
+---
+group: blog
+layout: blog
+class: blog
+permalink: /blog/tag/moby/
+tag: Moby
+title: Moby
+description: All blog posts published under Moby tag
+paginate:
+  collection: posts
+  per_page: 5
+  limit: false
+  permalink: '/page/:num/'
+  reversed: false
+  tag: 'Moby'
+---
+
+{% include tag.html %}

@@ -1,0 +1,36 @@
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </a>
+      <div class="nav-collapse collapse">
+        <a href="{{site.url}}/" class="logo">
+        {% if page.theme == "dark" %}
+        <img src="{% asset_path full-logo-small.png %}"  alt="Screenly" class="logo-img-normal">
+        <img src="{% asset_path screenly-grey-logo.png %}"  alt="Screenly" class="logo-img-grey">
+        {% else %}
+        <img src="{% asset_path screenly-grey-logo.png %}"  alt="Screenly">
+        {% endif %}
+        </a>
+        <div class="nav pull-right" style="margin-left: 2em">
+          <ul class="nav pull-right">
+            <!-- <li><a href="{{site.url}}/" id="nav-home">Home</a></li> -->
+            <li class="{% include utils/is-active s='tour' %}"><a href="{{site.url}}/tour/" id="nav-tour">Tour</a></li>
+            <li class="{% include utils/is-active s='players' %}"><a href="{{site.url}}/digital-signage-players/" id="nav-tour">Players</a></li>
+            <li class="{% include utils/is-active s='distributors' %}"><a href="{{site.url}}/distributors/" id="nav-pricing">Distributors</a></li>
+            <li class="{% include utils/is-active s='pricing' %}"><a href="{{site.url}}/pricing/" id="nav-pricing">Pricing</a></li>
+            <li class="{% include utils/is-active s='use_cases' %}"><a href="{{site.url}}/use-cases/" id="nav-use_cases">Use Cases</a></li>
+            <li class="{% include utils/is-active s='api' %}"><a href="{{site.url}}/api/" id="nav-use_cases">API</a></li>
+            <li class="{% include utils/is-active s='faq' %}"><a href="{{site.url}}/faq/" id="nav-faq">FAQ</a></li>
+            <li class="{% include utils/is-active s='blog' %}"><a href="{{site.url}}/blog/" id="nav-blog">Blog</a></li>
+            <li class="{% include utils/is-active s='ose' %}"><a href="{{site.url}}/ose/" id="nav-ose">Open Source Edition</a></li>
+            <li><a class="log-in" href="https://login.screenlyapp.com/login" id="nav-sign-in">Sign in</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

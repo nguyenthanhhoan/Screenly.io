@@ -1,0 +1,301 @@
+@keyframes slow-glow-pulse {
+    0% {
+        box-shadow: 0 0 8px 1px rgba(255, 255, 255, .30), inset 0 0 0 1px rgba(255, 255, 255, .5);
+    }
+    50% {
+        box-shadow: 0 0 8px 1px rgba(255, 255, 255, .75), inset 0 0 0 1px rgba(255, 255, 255, .5);
+    }
+}
+
+@keyframes tv-slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-214px * 7);
+    }
+}
+
+.inline {
+  display: inline-block;
+}
+
+p,
+blockquote,
+li {
+    color: #707983;
+
+    a {
+        color: #2a65a7;
+        text-decoration: underline;
+    }
+}
+
+.hero-unit {
+    padding: 40px;
+
+    @media (max-width: 979px) {
+        padding: 20px;
+
+        .navbar {
+            img {
+                max-height: 37px;
+                display: inline-block!important;
+            }
+        }
+    }
+}
+
+.navbar {
+    font-size: 14px;
+
+    .logo {
+
+        .logo-img-grey {
+            display: none;
+        }
+    }
+
+    .btn-navbar {
+        border: 0;
+        box-shadow: none;
+        background-image: none;
+        background: transparent;
+    }
+
+    @media (max-width: 979px) {
+        .navbar-inner {
+            min-height: 54px;
+            border: 0;
+            border-radius: 0;
+        }
+
+        .logo {
+            height: 54px;
+            line-height: 54px;
+            display: inline-block;
+
+            .logo-img-normal {
+                display: none!important; // because of .hero-unit img js manipulation gets priority
+            }
+
+            .logo-img-grey {
+                display: inline-block!important; // because of .hero-unit img js manipulation gets priority
+            }
+        }
+
+        .nav-collapse {
+            overflow: hidden;
+            min-height: 54px;
+
+            .nav.pull-right {
+                margin-left: 0!important;
+            }
+        }
+
+        .btn-navbar {
+            float: none;
+            display: inline-block;
+            position: absolute;
+            right: 20px;
+            top: 0;
+            z-index: 9999;
+
+            [class^="icon-"] {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.dark {
+    color: #ddd;
+    margin-top: 0px;
+    background: #0c1019;
+    background-image: radial-gradient(30% 400px, #212942 0%, #212942 0.24%, #0c1019 82.25%, #0c1019 100%);
+    background-image: -o-radial-gradient(30% 400px, #212942 0%, #212942 0.24%, #0c1019 82.25%, #0c1019 100%);
+    background-image: -ms-radial-gradient(30% 400px, #212942 0%, #212942 0.24%, #0c1019 82.25%, #0c1019 100%);
+    background-image: -moz-radial-gradient(30% 400px, #212942 0%, #212942 0.24%, #0c1019 82.25%, #0c1019 100%);
+    background-image: -webkit-radial-gradient(30% 400px, #212942 0%, #212942 0.24%, #0c1019 82.25%, #0c1019 100%);
+
+    .navbar {
+        @media (max-width: 979px) {
+            .navbar-inner {
+                min-height: 54px;
+                border: 0;
+                border-radius: 0;
+            }
+        }
+
+        .nav {
+            @media (min-width: 980px) {
+                .log-in {
+                    border-left: 1px solid #333;
+                }
+                &>li>a {
+                    color: #fff;
+                }
+            }
+
+            &>.active>a {
+                color: #999;
+            }
+        }
+    }
+
+    .hero-unit {
+      h1 {
+        line-height: 1.1;
+      }
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        color: white;
+    }
+}
+
+.tvslider {
+    left: 0px;
+    position: relative;
+    width: 214px * 3;
+    height: 470px;
+    overflow: hidden;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    transform: perspective(800px) rotateY(-10deg);
+
+    @media (min-width: 768px) and (max-width:979px) {
+        width: 214px * 2;
+    }
+
+    @media (min-width: 979px) and (max-width: 1200px) {
+        width: 214px * 2.5;
+    }
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+
+    .left-wall {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 0px;
+        height: 100%;
+        z-index: 1;
+        border-left: 1px solid #292929;
+        box-shadow: 1px 0 5px #000;
+    }
+
+    .right-wall {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 0px;
+        height: 100%;
+        z-index: 1;
+        border-left: 1px solid #292929;
+        box-shadow: -1px 0 5px #000;
+    }
+
+    .screens {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 164px * 3;
+        width: 214px * 10;
+        padding-top: 1px;
+        animation-name: tv-slide;
+        animation-duration: 60s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        .column {
+            float: left;
+            width: 214px;
+            height: 100%;
+
+            img {
+                display: inline-block;
+                border: 5px solid black;
+                margin: 2px;
+            }
+        }
+    }
+}
+
+
+
+.markdown {
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    p,
+    blockquote,
+    li {
+        color: #333;
+        font-size: 16px;
+    }
+}
+
+footer .colophon {
+    text-align: center;
+    font-size: 11px;
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 767px){
+    footer {
+        margin: 0 -24px;
+    }
+}
+
+/**
+ * Code highlight uses prism to style, so the container itself can be much pretty
+ */
+figure {
+    &.highlight {
+        margin: 40px 0;
+
+         :not(pre)>code[class*="language-"], pre[class*="language-"] {
+            background: transparent;
+        }
+    }
+}
+
+/**
+ * Helpers
+ */
+.text-center {
+    text-align: center;
+}
+
+
+
+/**
+ * JS Social
+ */
+
+.jssocials-share {
+    font-size: 12px;
+ }
+
+ .jssocials-share-link {
+    border-radius: 3px;
+    background: #b6bcba;
+ }
+
+
+
+@import 'nec';
+@import 'pricing';
+@import 'tour';
+@import 'blog';

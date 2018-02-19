@@ -1,0 +1,18 @@
+---
+group: blog
+layout: blog
+class: blog
+permalink: /blog/tag/diy/
+tag: DIY
+title: DIY
+description: All blog posts published under DIY tag
+paginate:
+  collection: posts
+  per_page: 5
+  limit: false
+  permalink: '/page/:num/'
+  reversed: false
+  tag: 'DIY'
+---
+
+{% include tag.html %}

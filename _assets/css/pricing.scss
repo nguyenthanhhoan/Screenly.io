@@ -1,0 +1,225 @@
+body.folder-pricing {
+    @media (max-width: 767px) {
+        padding-top: 60px;
+    }
+
+    section {
+        padding: 24px 0 60px;
+
+        @media (max-width: 767px) {
+            margin-left: -20px;
+            margin-right: -20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    @media (min-width: 980px) {
+        .navbar {
+            padding: 24px 40px 0;
+        }
+    }
+
+
+
+    .price-modules {
+        display: flex;
+        flex: 0 1 auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+
+        .col {
+            flex: 1;
+            flex-basis: calc(20% - 8px);
+            max-width: calc(20% - 8px);
+            margin-bottom: 10px;
+
+            & + .col {
+                margin-left: 10px;
+            }
+
+            .module {
+                height: 100%;
+            }
+
+            @media (max-width: 979px) {
+                flex-basis: calc(33.333333% - 8px);
+                max-width: calc(33.333333% - 8px);
+                
+                &:nth-child(4) {
+                    margin-left: 0;
+                }
+
+                &:nth-child(4),
+                &:nth-child(5) {
+                    flex-basis: calc(50% - 8px);
+                    max-width: calc(50% - 8px);
+
+                    .module {
+                        padding: 50px 24px;
+                    }
+                }
+            }
+
+            @media (max-width: 767px) {
+                flex-basis: 100%;
+                max-width: 100%;
+                margin-left: 0!important;
+
+                &:nth-child(4),
+                &:nth-child(5) {
+                    flex-basis: 100%;
+                    max-width: 100%;
+
+                    .module {
+                        padding: 0;
+                    }
+                }
+
+                .module {
+                    padding: 0;
+
+                    header {
+                        margin: 0;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .module.silver {
+        border: 2px solid rgb(224, 237, 253);
+        margin: -2px;
+    }
+
+    .module.gold {
+        border: 2px solid rgb(189, 166, 1);
+        margin: -2px;
+    }
+
+    .module.enterprise {
+        border: 2px solid rgb(25, 98, 190);
+        margin: -2px;
+    }
+
+    .module.mod-callout {
+        transition: slow-glow-pulse 4s ease infinite;
+        animation-direction: alternate;
+    }
+
+    .module.mod-pricing {
+        header {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            margin-top: -18%;
+
+            span {
+                color: #a4a4a4;
+                font-size: 20px;
+            }
+
+            @media (min-width: 979px) and (max-width: 1200px) {
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+                margin-top: -18%;
+            }
+
+            @media (min-width: 1200px) {
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+                margin-top: -18%;
+            }
+        }
+
+        h2 {
+            color: black;
+        }
+
+        .feature-list {
+            text-align: center;
+
+            li {
+                font-size: 12px;
+            }
+
+            .screens {
+                strong {
+                    color: black;
+                    display: block;
+                    font-size: 20px;
+                }
+            }
+
+            .storage {
+                strong {
+                    color: black;
+                    display: block;
+                    font-size: 20px;
+                }
+            }
+
+            .assets {
+                strong {
+                    color: black;
+                    display: block;
+                    font-size: 20px;
+                }
+            }
+
+            .playlists {
+                strong {
+                    color: black;
+                    display: block;
+                    font-size: 20px;
+                }
+            }
+
+            .support {
+                strong {
+                    color: black;
+                    display: block;
+                    font-size: 15px;
+                }
+                a.btn-medium {
+                    margin-top: 20px;
+                    text-decoration: none;
+                }
+            }
+
+            em {}
+
+            small {
+                font-size: 11px;
+            }
+
+            .price {
+                color: black;
+                font-size: 20px;
+            }
+        }
+    }
+
+    .comparison {
+        .table-pricing-container {
+            overflow: auto;
+        }
+    }
+
+    table.pricing {
+        .info {
+            font-weight: normal;
+            font-size: 12px;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+        }
+
+        .muted {
+            font-size: 10px;
+        }
+
+        .price {
+            font-size: 15px;
+        }
+    }
+}

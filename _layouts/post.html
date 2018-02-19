@@ -1,0 +1,61 @@
+<!doctype html>
+<!--[if lt ie 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if ie 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if ie 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt ie 8]><![endif]-->
+<html class="no-js">
+  {% include head.html %}
+
+  <body class="{{ page.class }}">
+      {% include mixpanel.html %}
+      
+      <div role="main">
+          <div class="container">
+              {% include navbar.html %}
+          </div>
+      </div>
+
+      <section>
+          <div class="container">
+              <div class="row">
+                  <article class="span9 content">
+                    {{ content }}
+
+                    <hr/>
+
+                    <div class="authors">
+                      <span class="fa fa-user" title="Author"></span>
+                      {% for author in site.data.authors %}
+                        {% if author.name == page.author %}
+                      <a href="{{site.url}}/blog/author/{{author.name | slugify}}/" class="author">{{ author.full_name }}</a>
+                        {% endif %}
+                      {% endfor %}
+                    </div>
+
+                    <div class="categories">
+                      <span class="fa fa-archive" title="Categories"></span>
+                      {% for cat in page.category %}
+                      <a href="{{site.url}}/blog/category/{{cat | slugify}}/" class="cat">{{ cat }}</a> {% unless forloop.last %}<i>/</i>{% endunless %} 
+                      {% endfor %}
+                    </div>
+
+                    <div class="tags">
+                      <span class="fa fa-tags" title="Tags"></span>
+                      {% for tag in page.tags %}
+                      <a href="{{site.url}}/blog/tag/{{tag | slugify}}/" class="tag">{{ tag }}</a> {% unless forloop.last %}<i>/</i>{% endunless %} 
+                      {% endfor %}
+                    </div>
+
+                    <div id="share"></div>
+                  </article>
+
+                  <div class="span3 sidebar">
+                      {% include sidebar.html %}
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      {% include footer.html %} {% include foot.html %}
+  </body>
+</html>

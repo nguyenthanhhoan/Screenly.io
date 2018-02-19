@@ -1,0 +1,18 @@
+---
+group: blog
+layout: blog
+class: blog
+permalink: /blog/tag/press-release/
+tag: Press Release
+title: Press Release
+description: All blog posts published under Press Release tag
+paginate:
+  collection: posts
+  per_page: 5
+  limit: false
+  permalink: '/page/:num/'
+  reversed: false
+  tag: 'Press Release'
+---
+
+{% include tag.html %}

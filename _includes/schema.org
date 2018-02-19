@@ -1,0 +1,24 @@
+<!-- Google Schema.org -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "{{site.production_url}}",
+    "sameAs": [
+      "https://angel.co/screenly",
+      "{{site.social.google}}",
+      "{{site.social.facebook}}",
+      "{{site.social.twitter}}",
+      "{{site.social.linkedin}}",
+      "{{site.social.github}}",
+      "{{site.social.medium}}",
+      "{{site.social.youtube}}"
+    ],
+    "name": "{{site.title}}",
+    "description": "{{site.description}}",
+    "logo": "{{site.production_url}}{% asset_path full-logo-small.png %}",
+    "image": "{{site.production_url}}{% include utils/page-image %}"
+  }
+]
+</script>
